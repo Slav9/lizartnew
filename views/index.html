@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title></title>
+
+    <!--<title>Dashboard Sidebar Menu</title>-->
+</head>
+<body>
+<nav class="sidebar close">
+    <header>
+        <div class="image-text">
+
+                <span class="image">
+                    <img src="https://i.imgur.com/nSTyAY2.jpg" width="150" height="70" alt="" id="logoSmall">
+                </span>
+
+                <span class="image2">
+                    <img src="https://i.imgur.com/O7nFyj6.png" width="186" height="75" id="logoMid" alt="">
+                </span>
+        </div>
+
+        <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+    <div class="menu-bar">
+        <div class="menu">
+
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a class ="nav-link" href="/">
+                        <i class='bx bxs-home icon' ></i>
+                        <span class="text nav-text">Home</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="https://songbird-explorer.flare.network/address/0xf246bF23dBb959d4bf3d9F15f1C50c6264fdF966/transactions" target="_blank">
+                        <i class='bx bxs-wallet icon' ></i>
+                        <span class="text nav-text">Community Wallet</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="/roadmap">
+                        <i class='bx bx-pie-chart-alt icon' ></i>
+                        <span class="text nav-text">Roadmap</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="https://lizart.io/mint/dragonGenNation" target="_blank">
+                        <i class='bx bxs-error-alt bx-spin icon' ></i>
+                        <span class="text nav-text">Mint Page</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="https://twitter.com/LizArtNFT_" target="_blank">
+                        <i class='bx bxl-twitter icon'></i>
+                        <span class="text nav-text">Twitter</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="https://discord.gg/sP3hCtJzZZ" target="_blank">
+                        <i class='bx bxl-discord-alt icon'></i>
+                        <span class="text nav-text">Discord</span>
+                    </a>
+                </li>
+
+<!--                <li class="nav-link">-->
+<!--                    <a class="nav-link" href="/about">-->
+<!--                        <i class='bx bx-question-mark icon'></i>-->
+<!--                        <span class="text nav-text">About</span>-->
+<!--                    </a>-->
+<!--                </li>-->
+
+                <li class="nav-link">
+                    <a class="nav-link" href="/gallery">
+                         <i class='bx bxs-landscape icon'></i>
+                        <span class="text nav-text">Gabat Gallery</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="bottom-content">
+
+            <li class="mode">
+                <div class="sun-moon">
+                    <i class='bx bx-moon icon moon'></i>
+                    <i class='bx bx-sun icon sun'></i>
+                </div>
+                <span class="mode-text text">Dark mode</span>
+
+                <div class="toggle-switch">
+                    <span class="switch"></span>
+                </div>
+            </li>
+
+        </div>
+    </div>
+
+</nav>
+
+<section class="home">
+<!--    <img class="animate__animated  animate__fadeInTopRight  rounded-lg-3" src="https://i.imgur.com/vcx8equ.png" alt="Logo No Background" width="720">-->
+    <div style="display: flex; flex-wrap: wrap ">
+    <img src="https://i.imgur.com/vcx8equ.png" width="100%" height="auto" style="max-width: 720px; white-space: nowrap; ">
+    <div class="text">13 y.o. artist of NFT project on:<br>
+        Flare ☀️ and Songbird 🐦 Networks!<br>
+        We’re focusing on helping charity and nonprofits &#11088;<br>
+        NFT🐲<br>
+        GAMES🎮(SOON!)<br>
+        PHYGITAL <span style='font-size:40px;'>&#128444;</span> <br>
+       </div>
+    </div>
+</section>
+
+<script>
+    const body = document.querySelector('body'),
+        sidebar = body.querySelector('nav'),
+        toggle = body.querySelector(".toggle"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text"),
+        logoSmall = document.getElementById("logoSmall"),
+        logoMid = document.getElementById("logoMid");
+
+        logoMid.style.visibility = 'hidden';
+
+
+    toggle.addEventListener("click" , () =>{
+        sidebar.classList.toggle("close")
+        if (logoSmall.style.visibility === 'hidden') {
+            logoMid.style.visibility ='hidden';
+            logoSmall.style.visibility = 'visible';
+        } else {
+            logoSmall.style.visibility = 'hidden';
+            logoMid.style.visibility = 'visible';
+        }
+    })
+
+    modeSwitch.addEventListener("click" , () =>{
+        body.classList.toggle("dark");
+
+        if(body.classList.contains("dark")){
+            modeText.innerText = "Light mode";
+        }else{
+            modeText.innerText = "Dark mode";
+
+        }
+    });
+</script>
+</body>
+</html>

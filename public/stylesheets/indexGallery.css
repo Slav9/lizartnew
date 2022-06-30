@@ -1,0 +1,55 @@
+html, body {
+    background: rgb(20,20,20);
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+}
+.svg-wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    width: 320px;
+}
+.shape {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    fill: transparent;
+    stroke: #d8d8d8;
+    border-bottom: 5px solid black;
+    transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.text {
+    font-family: 'Roboto Condensed';
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 8px;
+    color: #fff;
+    top: -48px;
+    position: relative;
+}
+.navtext{
+    font-family: 'Alex Brush', cursive;
+    font-size: 96px;
+    color:#d8d8d8;
+    margin: auto;
+}
+.svg-wrapper:hover .shape {
+    stroke-width: 2px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vh;
+    padding: 5px;
+    margin-top: 300px;
+}
+.svg-wrapper a{
+    text-decoration: none;
+}
+.div a{
+    text-decoration: none;
+}
